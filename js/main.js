@@ -7,7 +7,7 @@ function calcPrice() {
     let name = document.getElementById("name").value;
     let price = km * 0.21;
     if (isNaN(km) || name == "" || age == "") {
-        retry = confirm("Oops, alcuni dati sono errati.");
+        confirm("Oops, alcuni dati sono errati.");
     }
     else {
         if (age == "Minorenne") {
@@ -29,8 +29,4 @@ function calcPrice() {
 
 
 btnReset = document.getElementById("resetBtn");
-btnReset.addEventListener("click", reloadPage);
-
-function reloadPage() {
-    location.reload();
-}
+btnReset.addEventListener("click", function reloadPage() { location.reload() });
