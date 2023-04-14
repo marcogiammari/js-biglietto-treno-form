@@ -26,17 +26,19 @@
                 <div class="col-8 col-lg-4 d-flex flex-column">
                     <label class="pb-2" for="age">Fascia d'età</label>
                     <select class="form-control" name="age" id="age"> 
+                        <option value=""></option>
                         <option value="Minorenne">Minorenne</option>
                         <option value="18-65">18-65</option>
                         <option value="65+">65+</option>
                     </select>
                 </div>
             </div>
-        </form>
-        <div class="text-center">
+        
+          <div class="text-center">
             <button id="calcPriceBtn" class="btn bg-success text-white me-2">Calcola</button>
             <button id="resetBtn" class="btn bg-success text-white ms-2">Annulla</button>
-        </div>
+          </div>
+        </form>
       </div>
     </div>
     <div class="card bg-light-subtle col-10 col-lg-6">
@@ -65,9 +67,9 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td>Biglietto Standard</td>
-                    <td>5</td>
-                    <td>92911</td>
+                    <td id="fare"></td>
+                    <td id="car"></td>
+                    <td id="cp">92911</td>
                     <td id="price"></td>
                   </tr>
                 </tbody>
