@@ -6,8 +6,8 @@ function calcPrice() {
     let age = document.getElementById("age").value;
     let name = document.getElementById("name").value;
     let price = km * 0.21;
-    if (isNaN(km) || name == "" || age == "") {
-        confirm("Oops, alcuni dati sono errati.");
+    if (isNaN(km) || name == "" || age == "" || /[0-9]/.test(name)) {
+        confirm("Oops, alcuni dati sono mancanti o errati.");
     }
     else {
         if (age == "Minorenne") {
@@ -22,7 +22,12 @@ function calcPrice() {
         document.getElementById("fare").innerText = age;
         randomCar = Math.floor(Math.random() * 9 + 1);
         document.getElementById("car").innerHTML = randomCar;
-        randomCP = Math.floor(Math.random() * 10000 + 10000);
+        let randomCP = "";
+        for (let i = 0; i < 5; i++) {
+            let randomNum = (Math.floor(Math.random() * 10));
+            toString(randomNum);
+            randomCP += randomNum;
+        }
         document.getElementById("cp").innerHTML = randomCP;
     }
 }
