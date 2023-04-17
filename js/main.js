@@ -6,8 +6,11 @@ function calcPrice() {
     let age = document.getElementById("age").value;
     let name = document.getElementById("name").value;
     let price = km * 0.21;
-    if (isNaN(km) || name == "" || age == "" || !/^[a-zA-Z'\s]*$/.test(name)) {
-        confirm("Oops, alcuni dati sono mancanti o errati.");
+    if (!/^[a-zA-Z'\sàáèéìíòóùú]*$/.test(name)) {
+        alert("Oops, alcuni dati sono mancanti o errati.");
+    }
+    else if (isNaN(km) || name == "" || age == "") {
+        alert("Oops, alcuni dati sono mancanti o errati.");
     }
     else {
         if (age == "Minorenne") {
